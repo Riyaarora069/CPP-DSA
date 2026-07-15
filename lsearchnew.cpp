@@ -13,7 +13,7 @@ int main(){
         
     }
     cout<<"Target element may be at index -1"<<endl;//if element is not found at any index then -1 needs to be returned.. 
-}*/
+}
 
 
 #include<iostream>
@@ -35,8 +35,8 @@ using namespace std;
     int main(){
         int nums[]={2,4,6,8,10,12,14};
         int size=7;
-        int key=10;
+        int key=100;
         int result=linearSearch(nums,size,key);
-        cout<<"Target element is at index" <<" " <<result;
+        cout<<"Target element is at index" <<" " <<result;*/
         
 }
