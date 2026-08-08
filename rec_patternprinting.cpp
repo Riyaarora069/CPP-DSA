@@ -4,17 +4,18 @@ void print(int n)
 {
     if(n==0)
     {
-        return ;
+        return;
     }
     cout<<n<<endl;
-    return print(n-1);
+    print(n-1);
+    cout<<n<<endl;
+    
 }
 int main()
 {
     int n;
     cout<<"Enter a number:"<<endl;
     cin>>n;
-    cout<<"Here's the pattern from "<<n<<" "<<" to 1"<<endl;
-
+    cout<<"Here's the pattern from "<<n<< " to 1, followed by pattern from 1 to "<< n<<endl;
     print(n);
 }
