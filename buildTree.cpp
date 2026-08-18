@@ -27,10 +27,24 @@ Node* buildTree(vector<int> nodes)
     currNode -> right = buildTree(nodes);
     return currNode;
 }
+int height(Node* root)
+{
+    if(root==0)
+    {
+        return 0;
+    }
+    int leftHt = height(root->left);
+    int rightHt = height(root->right);
+    int currHt= max(leftHt, rightHt) + 1;
+    return currHt;
+
+}
 int main()
 {
     vector<int> nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
-    cout<<"The root node is: "<<buildTree(nodes) ->data;
+    Node* root = buildTree(nodes);
+    cout<<"The root is: "<<root->data;
     cout<<endl;
+    cout<<"Height: "<<height(root);
     return 0;
 }
